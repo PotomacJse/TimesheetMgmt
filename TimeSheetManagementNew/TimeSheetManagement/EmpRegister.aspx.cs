@@ -23,8 +23,8 @@ namespace TimeSheetManagement
         {
            
             
-                string connectString = @"Data Source=DESKTOP-5F9S36O\SQLEXPRESSNEW;Initial Catalog=TimesheetMgmt;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
-                SqlConnection conn = new SqlConnection(connectString);
+                
+                SqlConnection conn = new SqlConnection(HomePage.connectString);
                 conn.Open();
                 try
                 {

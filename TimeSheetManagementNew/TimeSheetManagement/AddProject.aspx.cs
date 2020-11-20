@@ -12,7 +12,7 @@ namespace TimeSheetManagement
     public partial class AddProject : System.Web.UI.Page
     {
 
-        string connectString = @"Data Source=DESKTOP-5F9S36O\SQLEXPRESSNEW;Initial Catalog=TimesheetMgmt;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+        
         SqlConnection con;
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -23,7 +23,7 @@ namespace TimeSheetManagement
         }
         protected void Button1_Click(object sender, EventArgs e)
         {
-            con = new SqlConnection(connectString);
+            con = new SqlConnection(HomePage.connectString);
             con.Open();
             try
             {

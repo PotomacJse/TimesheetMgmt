@@ -11,7 +11,6 @@ namespace TimeSheetManagement
 {
     public partial class AddTeamMember : System.Web.UI.Page
     {
-        string connstring = @"Data Source=DESKTOP-5F9S36O\SQLEXPRESSNEW;Initial Catalog=TimesheetMgmt;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
         string myquery = "";
         SqlConnection conn;
         SqlCommand command;
@@ -24,7 +23,7 @@ namespace TimeSheetManagement
             if (!Page.IsPostBack)
             {
                 myquery = "select * from dbo.Employee";
-                using (conn = new SqlConnection(connstring))
+                using (conn = new SqlConnection(HomePage.connectString))
                 {
                     try
                     {
@@ -72,7 +71,7 @@ namespace TimeSheetManagement
                 }
                 else
                 {
-                    conn = new SqlConnection(connstring);
+                    conn = new SqlConnection(HomePage.connectString);
                     conn.Open();
                     
                     command = new SqlCommand("AddTeamMember", conn);

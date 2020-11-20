@@ -12,14 +12,14 @@ namespace TimeSheetManagement
     public partial class CreateTimesheet : System.Web.UI.Page
     {
         
-        string connString = @"Data Source=DESKTOP-5F9S36O\SQLEXPRESSNEW;Initial Catalog=TimesheetMgmt;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+        
         protected void Page_Load(object sender, EventArgs e)
         {
             //email = Request.QueryString["email"];
           if (!Page.IsPostBack)
           { 
            
-           using (SqlConnection conn = new SqlConnection(connString))
+           using (SqlConnection conn = new SqlConnection(HomePage.connectString))
            {
                     try
                     {
@@ -65,7 +65,7 @@ namespace TimeSheetManagement
                 }
                 else
                 {
-                    using (SqlConnection conn = new SqlConnection(connString))
+                    using (SqlConnection conn = new SqlConnection(HomePage.connectString))
                     {
                         try
                         {

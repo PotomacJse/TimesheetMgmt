@@ -19,9 +19,9 @@ namespace TimeSheetManagement
             }
             if (!IsPostBack)
             {
-                string connectString = @"Data Source=DESKTOP-5F9S36O\SQLEXPRESSNEW;Initial Catalog=TimesheetMgmt;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+                
                 SqlConnection conn;
-                conn = new SqlConnection(connectString);
+                conn = new SqlConnection(HomePage.connectString);
                 conn.Open();
                 SqlCommand sqlComm = new SqlCommand("empShow", conn);
                 sqlComm.CommandType = CommandType.StoredProcedure;
@@ -38,8 +38,8 @@ namespace TimeSheetManagement
         protected void Button1_Click(object sender, EventArgs e)
         {
             
-            string connectString = @"Data Source=DESKTOP-5F9S36O\SQLEXPRESSNEW;Initial Catalog=TimesheetMgmt;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
-            SqlConnection conn = new SqlConnection(connectString);
+            
+            SqlConnection conn = new SqlConnection(HomePage.connectString);
             conn.Open();
             try
             {
@@ -71,9 +71,8 @@ namespace TimeSheetManagement
 
         protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string connectString = @"Data Source=DESKTOP-5F9S36O\SQLEXPRESSNEW;Initial Catalog=TimesheetMgmt;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
             SqlConnection conn;
-            conn = new SqlConnection(connectString);
+            conn = new SqlConnection(HomePage.connectString);
             conn.Open();
             SqlCommand sqlComm = new SqlCommand("lastname", conn);
             sqlComm.Parameters.AddWithValue("@fname", DropDownList1.Text);

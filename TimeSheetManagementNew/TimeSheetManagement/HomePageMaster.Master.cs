@@ -9,6 +9,7 @@ namespace TimeSheetManagement
 {
     public partial class HomePage : System.Web.UI.MasterPage
     {
+        public static string connectString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=TimesheetMgmt;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
         protected void Page_Load(object sender, EventArgs e)
         {
 

@@ -30,7 +30,7 @@
     <ul class="nav navbar-nav">
       <li><a href="HomePage.aspx">Home</a></li>
         <li><a href="CreateTimesheet.aspx">Create Timesheets</a></li>
-      <li><a href="#">View&nbsp; Timesheet</a></li>
+      <li><a href="ViewTimesheetInEmpPanel.aspx">View&nbsp; Timesheet</a></li>
       <li><a href="EmpRegister.aspx"</a></li>
     </ul>
     <ul class="nav navbar-nav navbar-right" >

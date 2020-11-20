@@ -14,12 +14,12 @@ namespace TimeSheetManagement
     {
         string projectID = "";
         SqlConnection conn;
-        string connstring = @"Data Source=DESKTOP-5F9S36O\SQLEXPRESSNEW;Initial Catalog=TimesheetMgmt;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+        
         public void syncemp()
         {
             projectID = Request.QueryString["pid"];
 
-            using ( conn = new SqlConnection(connstring))
+            using ( conn = new SqlConnection(HomePage.connectString))
             {
                 try
                 {
@@ -58,7 +58,7 @@ namespace TimeSheetManagement
             string Pid = Convert.ToString(GridViewTeamMember.DataKeys[e.RowIndex].Values["Project_ID"]);
             string Empid= Convert.ToString(GridViewTeamMember.DataKeys[e.RowIndex].Values["Emp_ID"]);
             
-            using (conn = new SqlConnection(connstring))
+            using (conn = new SqlConnection(HomePage.connectString))
                 try
                 {
                     conn.Open();
@@ -92,7 +92,7 @@ namespace TimeSheetManagement
         {
             try
             {
-                conn = new SqlConnection(connstring);
+                conn = new SqlConnection(HomePage.connectString);
                 conn.Open();
                 
                 string ProjectID = Convert.ToString(GridViewTeamMember.DataKeys[e.RowIndex].Values["Project_ID"]);
