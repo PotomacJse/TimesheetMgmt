@@ -31,7 +31,7 @@ namespace TimeSheetManagement
                 SqlDataReader sdr = sqlComm.ExecuteReader();
                 if (sdr.Read())
                 {
-                    Session["UserName"] = TextBox1.Text;
+                    Session["EmpUserName"] = TextBox1.Text;
                     //Response.Redirect("Employeepanel.aspx");
                     Response.Redirect("EmployeePanel?email=" + TextBox1.Text);
                 }

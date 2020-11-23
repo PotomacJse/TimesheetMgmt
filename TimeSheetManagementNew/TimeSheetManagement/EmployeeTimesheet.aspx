@@ -23,9 +23,10 @@
     <p>
         <asp:GridView ID="GridView1" runat="server" Width="1513px" AutoGenerateColumns="False" BackColor="White" BorderColor="#336666" BorderStyle="Double" BorderWidth="3px" CellPadding="4" GridLines="Horizontal">
             <Columns>
-                <asp:BoundField DataField="Emp_ID" HeaderText="Employee ID" />
+                
                 <asp:BoundField DataField="FirstName" HeaderText="First Name" />
                 <asp:BoundField DataField="LastName" HeaderText="Last Name" />
+                <asp:BoundField DataField="Project_Name" HeaderText="Project Name" />
                 <asp:BoundField DataField="Task_ID" HeaderText="Task Name" />
                 <asp:BoundField DataField="Task_Desc" HeaderText="Task desciption" />
                 <asp:BoundField DataField="Efforts" HeaderText="Efforts" />

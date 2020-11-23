@@ -15,8 +15,11 @@ namespace TimeSheetManagement
         
         protected void Page_Load(object sender, EventArgs e)
         {
-            //email = Request.QueryString["email"];
-          if (!Page.IsPostBack)
+            if (Session["EmpUserName"] == null)
+            {
+                Response.Redirect("EmployeeLogin.aspx");
+            }
+            if (!Page.IsPostBack)
           { 
            
            using (SqlConnection conn = new SqlConnection(HomePage.connectString))

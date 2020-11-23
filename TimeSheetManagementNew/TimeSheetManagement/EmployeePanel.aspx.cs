@@ -12,7 +12,7 @@ namespace TimeSheetManagement
         protected void Page_Load(object sender, EventArgs e)
         {
             EmployeePanelMaster.email = Request.QueryString["email"];
-            if (Session["UserName"] == null)
+            if (Session["EmpUserName"] == null)
             {
                 Response.Redirect("EmployeeLogin.aspx");
             }

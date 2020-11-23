@@ -63,7 +63,10 @@ namespace TimeSheetManagement
         }
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["EmpUserName"] == null)
+            {
+                Response.Redirect("EmployeeLogin.aspx");
+            }
         }
 
         protected void Button1_Click(object sender, EventArgs e)
